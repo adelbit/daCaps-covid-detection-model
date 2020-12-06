@@ -47,4 +47,4 @@ def preprocessData(n_to_process=-1, img_shape=(224,224)):
 		img = transform.resize(img, img_shape, anti_aliasing=True)
 		plt.imsave(fname=new_path, arr=img, cmap='gray')
 
-preprocessData(n_to_process=-1, img_shape=(224,224))
+preprocessData(n_to_process=-1, img_shape=(128,128))
