@@ -9,7 +9,7 @@ from numpy import save
 
 #Data Selection
 
-all_xray_df = pd.read_csv('Data_Entry_2017.csv')
+all_xray_df = pd.read_csv('Data_Entry.csv')
 all_image_paths = {os.path.basename(x): x for x in glob(os.path.join('.', 'data', 'images*', '*.png'))}
 all_labels = np.unique(list(chain(*all_xray_df['Finding Labels'].map(lambda x: x.split('|')).tolist())))
 all_labels = [x for x in all_labels if len(x)>0]
@@ -44,7 +44,6 @@ for i in range(len(cat_sum)):
 X_r = np.delete(X,nonselect_id,0)
 Y_cat_r =  np.delete(Y_cat,nonselect_id,0) #final labels
 X_paths_r = X_r[:,0] #final paths
-
 
 #Converting Train Images into numpy array
 data_path = r'./database_preprocessed/'
