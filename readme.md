@@ -1,3 +1,6 @@
+DACAPS - Artificial Neural Network for the detection of COVID’19 using chest X-ray images
+
+
 • A Novel Hybrid Artificial Neural Network for the detection of
 COVID’19 using chest X-ray images, using capsule networks along with
 CNNs and HAMPS.
